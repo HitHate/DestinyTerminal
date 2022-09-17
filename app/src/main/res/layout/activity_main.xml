@@ -10,6 +10,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:text="天命终端"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,9 +22,11 @@
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/b3b7d0a20cf431ada45b83084536acaf2edd9872"
+        app:srcCompat="@drawable/main_logo"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -33,8 +36,8 @@
         android:layout_marginTop="44dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         android:selectAllOnFocus="true"
+        android:text="Name"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName4"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName4"
@@ -47,8 +50,8 @@
         android:layout_marginTop="18dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Password"
         android:selectAllOnFocus="true"
+        android:text="Password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
