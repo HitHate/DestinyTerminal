@@ -101,9 +101,7 @@ public class MainActivity extends AppCompatActivity {
                     bdLocation.getLocType()==BDLocation.TypeNetWorkLocation){
                 navigateTo(bdLocation);
             }
-            if (bdLocation == null || mapView == null) {
-                return;
-            }
+
             MyLocationData locData = new MyLocationData.Builder()
                     .accuracy(bdLocation.getRadius())// 设置定位数据的精度信息，单位：米
                     .direction(bdLocation.getDirection()) // 此处设置开发者获取到的方向信息，顺时针0-360
@@ -112,13 +110,13 @@ public class MainActivity extends AppCompatActivity {
                     .build();
             // 设置定位数据, 只有先允许定位图层后设置数据才会生效
             baiduMap.setMyLocationData(locData);
-            if (isFirstLocate) {
+            if(isFirstLocate){
                 isFirstLocate = false;
-                LatLng latLng = new LatLng(bdLocation.getLatitude(), bdLocation.getLongitude());
                 MapStatus.Builder builder = new MapStatus.Builder();
-                builder.target(latLng).zoom(20.0f);
+                builder.zoom(20.0f);
                 baiduMap.animateMapStatus(MapStatusUpdateFactory.newMapStatus(builder.build()));
             }
+
         }
     }
     private void navigateTo(BDLocation bdLocation) {
@@ -126,7 +124,6 @@ public class MainActivity extends AppCompatActivity {
             LatLng ll = new LatLng(bdLocation.getLatitude(),bdLocation.getLongitude());
             MapStatusUpdate update = MapStatusUpdateFactory.newLatLng(ll);
             baiduMap.animateMapStatus(update);
-            isFirstLocate = false;
         }
     }
 
