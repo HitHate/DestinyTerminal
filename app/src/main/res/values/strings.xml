@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">DestinyTerminal</string>
+    <string name="app_name">天命终端</string>
+    <string name="email">邮箱</string>
+    <string name="password">密码</string>
+    <string name="check_code">验证码</string>
+    <string name="next">下一步</string>
 </resources>
