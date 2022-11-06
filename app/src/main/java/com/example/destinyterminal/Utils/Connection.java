@@ -16,9 +16,9 @@ import java.net.InetAddress;
 public class Connection implements Runnable {
 
     AbstractXMPPConnection connection;
-    private static final String C_HOST = "124.221.210.85";//可访问到openfire服务的IP地址
+    private static final String C_HOST = "YOU_IP";//可访问到openfire服务的IP地址
     private static final int C_PORT = 5222;//端口，默认5222
-    private static final String C_DOMAIN = "124.221.210.85";
+    private static final String C_DOMAIN = "YOU_DOMAIN";
 
     @Override
     public void run() {

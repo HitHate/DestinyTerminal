@@ -18,7 +18,7 @@ public class Send_and_Save_Code implements Runnable {
 
     private final String email;// 收件人邮箱
     private final String code;// 激活码
-    private final String Jhost= "124.221.210.85";
+    private final String Jhost= "YOU_HOST";
     public Send_and_Save_Code(String email, String code) {
         this.email = email;
         this.code = code;
@@ -31,7 +31,7 @@ public class Send_and_Save_Code implements Runnable {
         // 创建连接对象javax.mail.Session
         // 创建邮件对象 javax.mail.Message
         // 发送一封激活邮件
-        String from = "kleeloveboom@163.com";// 发件人电子邮箱
+        String from = "YOU_EMAIL";// 发件人电子邮箱
         String host = "smtp.163.com"; // 指定发送邮件的主机smtp.163.com(网易)
 
         Properties properties = System.getProperties();// 获取系统属性
@@ -45,7 +45,7 @@ public class Send_and_Save_Code implements Runnable {
             // 获取默认session对象
             Session session = Session.getDefaultInstance(properties, new Authenticator() {
                 public PasswordAuthentication getPasswordAuthentication() {
-                    return new PasswordAuthentication("kleeloveboom@163.com", "EYMPLTXIUURHVTCC"); // 发件人邮箱账号、授权码
+                    return new PasswordAuthentication("kleeloveboom@163.com", "YOU_PASSWORD"); // 发件人邮箱账号、授权码
                 }
             });
 
@@ -64,7 +64,7 @@ public class Send_and_Save_Code implements Runnable {
             Transport.send(message);
             try {
                 Jedis jedis = new Jedis(Jhost, 6379);
-                jedis.auth("073600jn!");
+                jedis.auth("YOU_PASSWORD");
                 jedis.setex(this.email, 900, this.code);
                 jedis.close();
             } catch (Exception e) {

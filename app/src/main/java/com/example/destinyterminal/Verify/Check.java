@@ -18,8 +18,8 @@ public class Check implements Runnable{
     public void run() {
         try {
             //与远程Redis 数据库建立连接
-            Jedis jedis = new Jedis("124.221.210.85", 6379);
-            jedis.auth("073600jn!");
+            Jedis jedis = new Jedis("YOU_IP", 6379);
+            jedis.auth("YOU_PASSWORD");
             jedis.set("test@123.com","000000"); //用于测试的邮箱和验证码，已经输入进了redis服务器，测试完记得删除
             sign = this.code.equals(jedis.get(this.email));
             if(sign)
