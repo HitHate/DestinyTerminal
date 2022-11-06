@@ -56,5 +56,15 @@
       <option name="name" value="maven2" />
       <option name="url" value="https://mvnrepository.com/artifact/com.sun.mail/android-activation" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven2" />
+      <option name="name" value="maven2" />
+      <option name="url" value="https://mvnrepository.com/artifact/redis.clients/jedis" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven2" />
+      <option name="name" value="maven2" />
+      <option name="url" value="https://mvnrepository.com/artifact/com.alibaba.fastjson2/fastjson2" />
+    </remote-repository>
   </component>
 </project>

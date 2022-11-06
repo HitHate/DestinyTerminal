@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 设置Toolbar标题字体的颜色大小 -->
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">20sp</item><!--toolbar标题字体大小-->
+        <item name="android:textColor">#ffffff</item><!--toolbar标题字体颜色-->
+    </style>
+    <!-- 设置Toolbar 子标题subtitle标题字体的大小 -->
+    <style name="Toolbar.SubTitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">15sp</item><!--子标题字体大小-->
+        <item name="android:textColor">#ffffff</item><!--子标题字体颜色-->
+    </style>
+    <style name="popup_theme" parent="@style/ThemeOverlay.MaterialComponents.Light">
+        <item name="overlapAnchor">false</item>
+    </style>
+</resources>

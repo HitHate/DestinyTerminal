@@ -5,14 +5,37 @@
       <map>
         <entry key="..\:/DestinyTerminal/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2235" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.2245" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.2245" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2235" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.2245" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/drawable/outgoing.xml" value="0.2215" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/drawable/shape.xml" value="0.2245" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/layout-large/activity_login_or_register.xml" value="0.4" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/layout-large/activity_main.xml" value="0.4" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/layout-large/activity_register_email.xml" value="0.22488242838820008" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/layout-v23/activity_top_bar.xml" value="0.13120567375886524" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/layout-v31/activity_chat_manager.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/layout/actionbar_layout.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/layout/activity_bottom_bar.xml" value="0.2708333333333333" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/layout/activity_chat_manager.xml" value="0.25" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/layout/activity_chat_test.xml" value="0.27395833333333336" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/layout/activity_login_or_register.xml" value="0.2708333333333333" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/layout/activity_main.xml" value="0.2708333333333333" />
-        <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/layout/activity_register_email.xml" value="0.2" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/layout/activity_register_email.xml" value="0.4" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/layout/activity_register_password.xml" value="0.264" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/layout/activity_top_bar.xml" value="0.2708333333333333" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/layout/fragment_dashboard.xml" value="0.23505434782608695" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/layout/fragment_home.xml" value="0.2708333333333333" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/layout/fragment_notifications.xml" value="0.2708333333333333" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/layout/toolbar_layout.xml" value="0.2708333333333333" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/layout/top_bar.xml" value="0.25625" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2708333333333333" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/menu/top_bar.xml" value="0.264" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.209" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.209" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/DestinyTerminal/app/src/main/res/xml/network_security_config.xml" value="0.27395833333333336" />
       </map>
     </option>
   </component>

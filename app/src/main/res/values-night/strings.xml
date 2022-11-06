@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">天命终端</string>
     <string name="username">用户名</string>
@@ -14,8 +15,4 @@
     <string name="low_and_up_true">√ 至少包含一个大写和小写字母</string>
     <string name="symbols_true">√ 至少包含一个符号</string>
     <string name="length_true">√ 长度至少8位至多16位</string>
-    <string name="title_activity_bottom_bar">Bottom_Bar</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
 </resources>

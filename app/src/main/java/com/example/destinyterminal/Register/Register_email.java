@@ -1,24 +1,32 @@
-package com.example.destinyterminal;
+package com.example.destinyterminal.Register;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.Color;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.text.Editable;
-import android.text.InputFilter;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.TextPaint;
 import android.text.TextWatcher;
 import android.text.method.LinkMovementMethod;
-import android.text.style.BackgroundColorSpan;
 import android.text.style.ClickableSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.destinyterminal.Verify.Check;
+import com.example.destinyterminal.R;
+import com.example.destinyterminal.Verify.Send_and_Save_Code;
+
+import java.security.SecureRandom;
+
 
 public class Register_email extends AppCompatActivity {
 
@@ -35,6 +43,8 @@ public class Register_email extends AppCompatActivity {
 
         //用以接收用户输入的验证码
         final String[] check_code = {null};
+
+        SecureRandom secureRandom = new SecureRandom();
 
         //获取id为email的EditView组件
         EditText email_tv = findViewById(R.id.email);
@@ -68,9 +78,6 @@ public class Register_email extends AppCompatActivity {
 
         //设置get_code文本大小
         get_code.setTextSize(18);
-
-        //创建backcolorSpan对象用于设置文本背景颜色
-        BackgroundColorSpan bgColorSpan = new BackgroundColorSpan(Color.parseColor("#FFFFFF"));
 
         //注册文本监听器，用于监听email的文本输入
         email_tv.addTextChangedListener(new TextWatcher() {
@@ -133,11 +140,29 @@ public class Register_email extends AppCompatActivity {
             @Override
             //注册可点击文本方法
             public void onClick(@NonNull View view) {
+
                 if(sign[1]){
 
+                    String verifyCode = String.valueOf(secureRandom.nextInt(900000) + 100000);
+
                     //创建一个子线程，用于请求网络并发送邮件
-                    new Thread(new Email_check(email[0],"123456")).start();
+                    new Thread(new Send_and_Save_Code(email[0],verifyCode)).start();
+
                     Toast.makeText(Register_email.this, "验证码已发往邮箱地址!", Toast.LENGTH_SHORT).show();
+
+                    //用于设计倒计时，防止短时间内多次获取验证码
+                    new CountDownTimer(60000, 1000) {
+
+                        public void onTick(long millisUntilFinished) {
+                            String s = millisUntilFinished/1000 + "秒后获取";
+                            get_code.setText(s);
+                        }
+
+                        public void onFinish() {
+                            get_code.setText(spannableStringBuilder);
+                        }
+                    }.start();
+
                 }else{
                     Toast.makeText(Register_email.this, "请输入正确的邮箱地址，再尝试获取！", Toast.LENGTH_SHORT).show();
                 }
@@ -149,11 +174,30 @@ public class Register_email extends AppCompatActivity {
             }
         };
 
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Check check = new Check(email[0],check_code[0]);
+                try {
+                    Thread thread = new Thread(check);
+                    thread.start();
+                    thread.join();
+                    if(check.getSign()){
+                        startActivity(new Intent().setClass(Register_email.this,Register_password.class));
+                        Toast.makeText(Register_email.this, "验证码输入正确！", Toast.LENGTH_SHORT).show();
+                    }else {
+                        Toast.makeText(Register_email.this, "验证码输入错误！", Toast.LENGTH_SHORT).show();
+                    }
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        get_code.setHighlightColor(getResources().getColor(android.R.color.transparent));
+
         //将clickableSpan注册至spannableStringBuilder中
         spannableStringBuilder.setSpan(clickableSpan, 0, 5, Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
-
-        //将bgColorSpan注册至spannableStringBuilder中
-        spannableStringBuilder.setSpan(bgColorSpan, 0, 5, Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
 
         //将spannableStringBuilder注册至get_code中
         get_code.setText(spannableStringBuilder);

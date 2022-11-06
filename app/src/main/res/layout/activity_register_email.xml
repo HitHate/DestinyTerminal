@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Login_or_Register">
 
-
     <EditText
         android:id="@+id/email"
         android:layout_width="203dp"
@@ -20,13 +19,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.456"
         app:layout_constraintStart_toStartOf="parent" />
-
     <Button
         android:id="@+id/next"
         android:layout_width="200sp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="108dp"
-        android:text="下一步"
+        android:text="@string/next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -37,8 +35,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="76dp"
-        android:text="获取验证码"
-        android:textColor="@color/black"
+
+        android:text="@string/get_code"
         app:layout_constraintBottom_toBottomOf="@+id/check_code"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.471"
@@ -49,11 +47,16 @@
         android:id="@+id/tip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
         android:text="⚠请输入正确的邮箱"
         android:textColor="@color/red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/email"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/check_code"
@@ -61,7 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="188dp"
         android:ems="10"
-        android:hint="验证码"
+        android:hint="@string/check_code"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -90,6 +93,4 @@
         app:srcCompat="@drawable/main_logo"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="-29dp" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
